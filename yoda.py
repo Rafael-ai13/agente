@@ -20,8 +20,10 @@ def ouvir():
     except sr.UnknownValueError:
         falar('Desculpe não entendi')
         return ""
-    except sr.Request:
+    except sr.RequestError:
         falar('Não consegui abrir o sistema audio')
         return ""
 
 falar('Ola boa, tarde!')
+
+# a voz que vais ser usada para responder, dá para colocar voz personalizada, nesse programa está a voz padrão do pyttsx3
